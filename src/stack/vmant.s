@@ -15,7 +15,7 @@ VMANT:        c=regn  X
               sethex
               c=regn  d
               m=c
-              pt=     4             ; fix 9
+              pt=     4             ; FIX 9
               lc      9
               lc      8
               regn=c  d
