@@ -1,3 +1,4 @@
 *.lst
 *.o
 *.a
+doc/_build
