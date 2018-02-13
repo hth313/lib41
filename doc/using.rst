@@ -9,9 +9,9 @@ your project.
 
 If you want to work closer with Lib41 and are using Git, you can
 import it as a Git submodule to your own project. Refer to the `Pro Git book
-<https://github.com/blog/2104-working-with-submodules>`_ and `Working
+<https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ and `Working
 with submodules on GitHub
-<https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_.
+<https://github.com/blog/2104-working-with-submodules>`_.
 
 Either way, you need to link with ``lib41.a``, so you linker line
 may look something like:
