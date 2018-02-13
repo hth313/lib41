@@ -24,7 +24,7 @@ there, but they may be in different modules and having dependencies on
 a wide range of modules can become cumbersome.
 
 By rolling your own module, you can optimize it to your own
-use-case. Maybe others will like it too, so do not be afraidto share
+use-case. Maybe others will like it too, so do not be afraid to share
 it.
 
 It can also be that you have some good routines of your own, but it is
@@ -45,4 +45,19 @@ Contributions
 =============
 
 Contributions to this library are welcome, refer to the information
-provided on its project page at github.
+provided on its project page at GitHub.
+
+
+License
+=======
+
+The code is provided under the BSD three clause license. The original
+developers retain their copyrights.
+
+The ``LICENSE`` file lists the contributors as they are known.
+
+As some of this code has been floating around for years, it is not
+always easy to assess the original author. If you find or think there
+is any faults in the copyright holders, or you do not want your code
+shared this way, please get in touch with hth313@gmail.com or open a
+new issue.
