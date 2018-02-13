@@ -21,6 +21,9 @@ VMANT:        c=regn  X
               regn=c  d
               c=regn  X
               c=0     x             ; get mantissa
-              c=0     s             ; abs(X)
               gosub   DSPCRG        ; display
-              golong  STMSGF        ; set message flag
+              c=m                   ; restore display status
+              regn=c  d
+              st=1    8
+              golong  MSG105        ; set message flag
+
