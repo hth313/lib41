@@ -7,7 +7,7 @@ SRCS = ashfx.s mkxyz.s error.s returnStack.s vmant.s
 all: $(LIB)
 
 %.o: %.s
-	asnut -g -l -I /usr/local/lib/nutstudio-nut-3.0.1/include $<
+	asnut -g -l $<
 
 $(LIB): $(OBJS)
 	nlib $(LIB) $(OBJS)
