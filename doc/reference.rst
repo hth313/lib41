@@ -49,6 +49,8 @@ Execution control and the return stack.
 Stack
 =====
 
+.. include:: stack/apx.rst
+
 .. include:: stack/vmant.rst
 
 
