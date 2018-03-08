@@ -34,4 +34,4 @@ ARCLI:        c=regn  14            ;
               gosub   XARCL         ; append to alpha
               c=n                   ; restore flag register
               regn=c  14
-              golong  NFRPU
+              rtn
