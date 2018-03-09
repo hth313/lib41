@@ -10,19 +10,12 @@
               .section code, noroot
 
               .name   "ARCLI"
-ARCLI:        c=regn  14            ;
+ARCLI:        c=regn  14
               n=c                   ; N= flag register
-              rcr     2
-              c=0     xs            ; DSP 0
-              cstex
-              s7=1                  ; FIX
-              cstex
-              rcr     4
-              cstex
-              s2=0                  ; CF 29
-              cstex
-              rcr     8
-              regn=c    14
+              c=0                   ; FIX 0, CF 29
+              pt=     3             ; (no alpha mode - return before ARGOUT)
+              lc      8
+              regn=c  14
               c=regn  X
               a=c
               a=a-1   s             ; check alpha data
@@ -34,4 +27,4 @@ ARCLI:        c=regn  14            ;
               gosub   XARCL         ; append to alpha
               c=n                   ; restore flag register
               regn=c  14
-              rtn
+              golong  NFRPU
