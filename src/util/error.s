@@ -22,3 +22,16 @@ errorExit:    gosub   LEFTJ
 errorMessage: gosub   ERRSUB
               gosub   CLLCDE
               golong  MESSL
+
+
+;;; **********************************************************************
+;;;
+;;; noRoom - display NO ROOM error message
+;;;
+;;; **********************************************************************
+
+              .section code, noroot
+              .pubweak noRoom
+noRoom:       gsbp    errorMessage
+              .messl  "NO ROOM"
+              golp    errorExit

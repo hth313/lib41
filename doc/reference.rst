@@ -44,6 +44,14 @@ Execution control and the return stack.
 .. include:: control/ge.rst
 
 
+.. index:: random numbers, pseudo random numbers
+
+Pseudo random numbers
+=====================
+
+.. include:: misc/rndm.rst
+
+
 .. index:: stack
 
 Stack
