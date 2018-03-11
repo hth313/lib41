@@ -28,6 +28,15 @@ Routines related to key re-assignments.
 .. include:: assignments/mkxyz.rst
 
 
+Buffer
+======
+
+Routines related to I/O buffers and the buffer area (except for key
+assignments.
+
+.. include:: buffer/killbuf.rst
+
+
 .. index:: control
 
 Control

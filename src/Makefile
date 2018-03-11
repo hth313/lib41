@@ -3,8 +3,8 @@ OBJS = $(SRCS:%.s=%.o) $(RPN_SRCS:%.rpn=%.o)
 LIB = lib41.a
 
 RPN_SRCS =
-SRCS = apx.s arcli.s ashfx.s error.s mkxyz.s returnStack.s vmant.s \
-       chkbuf.s rndm.s
+SRCS = apx.s arclint.s ashfx.s error.s mapkeys.s mkxyz.s returnStack.s vmant.s \
+       chkbuf.s killbuf.s rndm.s
 
 all: $(LIB)
 
