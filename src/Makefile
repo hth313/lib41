@@ -1,4 +1,4 @@
-VPATH = alpha:assignments:buffer:control:misc:stack:util
+VPATH = alpha:assignments:buffer:control:random:stack:util
 OBJS = $(SRCS:%.s=%.o) $(RPN_SRCS:%.rpn=%.o)
 LIB = lib41.a
 

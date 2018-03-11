@@ -49,7 +49,7 @@ Execution control and the return stack.
 Pseudo random numbers
 =====================
 
-.. include:: misc/rndm.rst
+.. include:: random/rndm.rst
 
 
 .. index:: stack
