@@ -203,7 +203,7 @@ create_seed_buffer:
               data=c
               goto    store_seed
 
-1$:           rgo     noRoom        ; no room to create seed buffer
+1$:           golp    noRoom        ; no room to create seed buffer
 
 chkbuf6:      ldi     6
               a=c
