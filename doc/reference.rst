@@ -13,7 +13,7 @@ Alpha
 
 Routines mainly related to the Alpha register.
 
-.. include:: alpha/arcli.rst
+.. include:: alpha/arclint.rst
 
 .. include:: alpha/ashfx.rst
 

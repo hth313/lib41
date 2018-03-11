@@ -6,11 +6,11 @@
 ;;;
 ;;; **********************************************************************
 
-              .pubweak ARCLI
+              .pubweak ARCLINT
               .section code, noroot
 
-              .name   "ARCLI"
-ARCLI:        c=regn  14
+              .name   "ARCLINT"
+ARCLINT:      c=regn  14
               n=c                   ; N= flag register
               c=0                   ; FIX 0, CF 29
               pt=     3             ; (no alpha mode - return before ARGOUT)
