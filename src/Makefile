@@ -4,7 +4,7 @@ LIB = lib41.a
 
 RPN_SRCS =
 SRCS = apx.s arclint.s ashfx.s error.s mapkeys.s mkxyz.s returnStack.s vmant.s \
-       chkbuf.s killbuf.s rndm.s
+       chkbuf.s killbuf.s rndm.s dice.s
 
 all: $(LIB)
 

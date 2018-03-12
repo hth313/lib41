@@ -60,6 +60,8 @@ Pseudo random numbers
 
 .. include:: random/rndm.rst
 
+.. include:: random/dice.rst
+
 
 .. index:: stack
 
