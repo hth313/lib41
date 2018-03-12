@@ -25,6 +25,8 @@ Assignments
 
 Routines related to key re-assignments.
 
+.. include:: assignments/mapkeys.rst
+
 .. include:: assignments/mkxyz.rst
 
 
