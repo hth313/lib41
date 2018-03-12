@@ -74,9 +74,9 @@ RNDM0:        gsbp    chkbuf6       ; seek seed buffer
 ;;;      C= same as A
 ;;;      hex mode
 ;;;
-;;; Uses: A, B, C
-;;;       N, M, DADD, PFAD, +3 sub levels (RNDM0)
-;;;       M, +2 sub level (RNDMA)
+;;; Uses: A, B, C, M
+;;;       N, DADD, PFAD, +3 sub levels (RNDM0)
+;;;                      +2 sub levels (RNDMA)
 ;;;
 ;;; **********************************************************************
 
