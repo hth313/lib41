@@ -72,6 +72,8 @@ Stack
 
 .. include:: stack/apx.rst
 
+.. include:: stack/fixeng.rst
+
 .. include:: stack/vmant.rst
 
 
