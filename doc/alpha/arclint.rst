@@ -1,6 +1,6 @@
-.. index:: ARCLI
+.. index:: ARCLINT
 
-.. object:: ARCLI
+.. object:: ARCLINT
 
-   Append the integer value of X to alpha register. If X contains an
-   alpha string, then the string is appended.
+Append the integer value of X to alpha register. If X contains an
+alpha string, then the string is appended.

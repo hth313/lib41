@@ -27,6 +27,6 @@ value ``0`` is used.
 
 .. object:: SEED
 
-This routine takes the value from X and uses that as the seed. This
-is useful when you want to generate a series of pseudo random numbers
-that can be repeated (by setting the same initial seed value).
+   This routine takes the value from X and uses that as the seed. This
+   is useful when you want to generate a series of pseudo random numbers
+   that can be repeated (by setting the same initial seed value).

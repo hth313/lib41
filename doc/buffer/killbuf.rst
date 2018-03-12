@@ -2,9 +2,9 @@
 
 .. object:: KILLBUF
 
-   Remove the I/O buffer as specified by the number in X (0 - 15).
-   Gives ``NONEXISTENT`` if given buffer does not exist (or given
-   number is out of range).
+Remove the I/O buffer as specified by the number in X (0 - 15).
+Gives ``NONEXISTENT`` if given buffer does not exist (or given
+number is out of range).
 
 .. note::
 
