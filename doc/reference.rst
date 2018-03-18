@@ -17,6 +17,10 @@ Routines mainly related to the Alpha register.
 
 .. include:: alpha/ashfx.rst
 
+.. include:: alpha/atoxr.rst
+
+.. include:: alpha/xtoal.rst
+
 
 .. index:: assignments
 
