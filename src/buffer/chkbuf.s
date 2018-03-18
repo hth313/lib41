@@ -13,7 +13,7 @@
 ;;;
 ;;; USES: A, C, PT (=12)
 ;;;
-;;; Code orignally from the Time module.
+;;; Inspired by code in the Time module.
 ;;;
 ;;; **********************************************************************
 
@@ -43,10 +43,10 @@ chkbuf:       acex    x             ; main find entry point
               ?a#c    pt            ; no, must be a buffer, have we found
                                     ; the buffer we are searching for?
               goc     3$            ; no
-              c=stk                 ; yes, fix (P+2) as return point
+              c=stk                 ; yes, return to (P+2)
               c=c+1   m
               stk=c
-              c=data                ; Load header register to C
+              c=data                ; load header register to C
               rtn
 
 3$:           rcr     10            ; wrong buffer, skip to next
