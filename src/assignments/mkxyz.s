@@ -1,4 +1,5 @@
 #include "mainframe.h"
+#include "lib41.h"
 
 XASN05:       .equlab 0x27ad        ; unofficial entry point
 
@@ -19,9 +20,8 @@ XASN05:       .equlab 0x27ad        ; unofficial entry point
 ;;; **********************************************************************
 
               .pubweak MKXYZ, Assign2
-              .extern errorMessage, errorExit
-
               .section code, noroot
+
               .name   "MKXYZ"
 MKXYZ:        c=regn  z
               gosub   BCDBIN

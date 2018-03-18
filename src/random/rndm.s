@@ -1,4 +1,5 @@
 #include "mainframe.h"
+#include "lib41.h"
 
 IGDHMS:       .equ    0x5AB6         ; time module
 
@@ -29,7 +30,6 @@ IGDHMS:       .equ    0x5AB6         ; time module
 
               .pubweak RNDM, SEED
               .pubweak RNDM0, RNDMA, StoreSeed
-              .extern chkbuf, noRoom
               .section code, noroot
 
               .name   "RNDM"

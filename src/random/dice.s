@@ -1,9 +1,9 @@
 #include "mainframe.h"
+#include "lib41.h"
 
               .pubweak `2D6`
-              .extern RNDM0, RNDMA, StoreSeed
-
               .section code, noroot
+
               .name   "2D6"
 `2D6`:        s9=0
               gsbp    RNDM0         ; get first number

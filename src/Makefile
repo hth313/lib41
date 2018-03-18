@@ -12,7 +12,7 @@ all: $(LIB)
 	rpncomp -l --no-fat --prefix-labels LBL_ $<
 
 %.o: %.s
-	asnut -g -l $<
+	asnut -g -l -I../include $<
 
 $(LIB): $(OBJS)
 	nlib $(LIB) $(OBJS)
