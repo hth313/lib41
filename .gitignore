@@ -3,3 +3,4 @@
 *.a
 doc/_build
 test/*.mod
+test/lib41test
