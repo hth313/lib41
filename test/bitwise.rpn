@@ -1,0 +1,53 @@
+.local BCDAND, BCDOR, BCDXOR, BCDNOT
+
+LBL "BITWISE"
+0
+BCDNOT
+
+LASTX
+X#0?
+SF 99
+RDN
+
+2
+32
+Y^X
+1
+-
+X#Y?
+SF 99
+
+
+10
+3
+BCDOR
+11
+X#Y?
+SF 99
+
+7
+10
+BCDAND
+2
+X#Y?
+SF 99
+
+RDN
+RDN
+11
+X#Y?
+SF 99
+
+42
+22
+BCDXOR
+60
+X#Y?
+SF 99
+LASTX
+22
+X#Y?
+SF 99
+
+
+END

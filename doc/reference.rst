@@ -34,6 +34,14 @@ Routines related to key re-assignments.
 .. include:: assignments/mkxyz.rst
 
 
+Bitwise
+=======
+
+Bitwise operations on BCD integers.
+
+.. include:: bitwise/bcdand.rst
+
+
 Buffer
 ======
 
