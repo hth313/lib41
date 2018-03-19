@@ -16,18 +16,18 @@ it is ready to use in your source file.
 If it is a complete function then just add it to your function address
 table:
 
-            .extern ASHFX
+            #include "lib41.h"
             ...
-            .fat ASHFX
+            FAT ASHFX
 
 That is it! You now have imported the `ASHFX` function to your
-module.
+module and it is ready to be used by any local RPN program!
 
 To use a subroutine (that is not a named function), simply declare it
 and it is ready to be called using `gsbp` or `golp` (page relocatable
 calls):
 
-            .extern errorMessage, errorExit
+            #include "lib41.h"
             ...
             gsbp    errorMessage  ; key code error
             .messl  "KEYCODE ERR"
