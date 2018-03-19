@@ -59,6 +59,36 @@ Execution control and the return stack.
 .. include:: control/ge.rst
 
 
+.. index:: conversions; float point integer to binary
+.. index:: conversions; binary to floating point
+.. index:: binary to floating point conversion
+.. index:: float point integer to binary conversion
+
+
+Conversion
+==========
+
+Various conversion utilities.
+
+``AtoX`` converts a binary number in A to floating point integer and
+saves to X by the ``RCL`` routine in mainframe. Alternative entry
+points allows for saving ``A.X`` (``AXtoX``) and drop the result into
+X (``AtoXDrop``), suitable after a binary operation.
+
+In the other direction ``XBCD2BIN`` and ``BCD2BIN`` can convert
+floating point integer numbers to binary allowing for much larger
+numbers compared to ``BCDBIN`` in mainframe.
+
+For getting range limited numbers as input some routines coming from
+Extended Functions are provided. These are ```X<999```, ```A<999```
+and ```X<256```.
+
+
+.. include:: conversion/code.rst
+
+.. include:: conversion/decode.rst
+
+
 .. index:: random numbers, pseudo random numbers
 
 Pseudo random numbers
