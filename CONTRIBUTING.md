@@ -47,3 +47,12 @@ Git commit messages
 - Use the present tense ("Add feature" not "Added feature")
 - Wrap lines at 72 characters in body
 - Use the body to explain what and why, rather than how
+
+
+License matters
+---------------
+
+I would like to keep a permissive license on this code base so the 3-clause
+BSD license is used. Individual authors are added to it roughly in the order
+of companies, large contributors and the rest. Then ordered alphabetically in
+each sub-group. Roughly.
