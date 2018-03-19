@@ -13,8 +13,8 @@ two dices and adding the values together is a good example of.
 
 You may also want to study the implementation of ``2D6`` as it shows
 how to use the MCODE entry points provided by ``RNDM``. Making
-multiple pseudo random numbers can be made much faster from inside
-MCODE compared to using RPN code.
+multiple pseudo random numbers can be made much faster in MCODE
+compared to RPN.
 
 
 .. note::
