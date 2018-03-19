@@ -25,22 +25,3 @@ KILLBUF:      gsbp    chkbufx
               golong  PKIOAS        ; pack I/O area (and remove buffer)
 
 10$:          golong  ERRNE         ; NONEXISTENT
-
-
-;;; **********************************************************************
-;;;
-;;; CHKBUFX - locate buffer as specified in X
-;;;
-;;; **********************************************************************
-
-              .pubweak chkbufx
-              .extern chkbuf
-              .section code, noroot
-
-chkbufx:      c=regn  X
-              gosub   BCDBIN
-              a=c     x
-              ldi     16
-              ?a<c    x
-              golong  ERRNE         ; NONEXISTENT
-              golp    chkbuf

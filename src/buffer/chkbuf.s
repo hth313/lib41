@@ -1,3 +1,5 @@
+#include "mainframe.h"
+
 ;;; **********************************************************************
 ;;;
 ;;; chkbuf - locate an I/O buffer with a given number.
@@ -53,3 +55,21 @@ chkbuf:       acex    x             ; main find entry point
               c=0     xs
               a=a+c   x
               goto    2$
+
+
+;;; **********************************************************************
+;;;
+;;; chkbufx - locate buffer as specified in X
+;;;
+;;; **********************************************************************
+
+              .pubweak chkbufx
+              .section code, noroot
+
+chkbufx:      c=regn  X
+              gosub   BCDBIN
+              a=c     x
+              ldi     16
+              ?a<c    x
+              golong  ERRNE         ; NONEXISTENT
+              golp    chkbuf
