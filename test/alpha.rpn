@@ -1,0 +1,53 @@
+.import 41cx
+.local ARCLINT, ASHFX, ATOXR, XTOAL
+
+LBL "ALPHA"
+CLA
+64
+XTOAL
+65
+XTOAL
+ATOXR
+64
+X#Y?
+SF 99
+ATOXR
+65
+X#Y?
+SF 99
+
+ATOXR     ; now alpha should be empty
+X#0?
+SF 99
+
+"0123456789"   ; insert 10 characters
+64             ; append 2 from left
+XTOAL
+XTOAL
+>"ABCDEFGHIJ"  ; 10 more
+XTOAL          ; 2 more from left
+XTOAL
+XTOAL          ; this should push out the 'J'
+73
+ATOXR          ; get the 'I'
+X#Y?
+SF 99          ; not 'I'
+
+14
+ASHFX          ; remove 14 characters
+ALENG          ; now we should gave 24 - 1 - 14 = 9
+9
+X#Y?
+SF 99
+5.2
+ARCLINT        ; insert a 5
+ATOXR          ; take its ASCII code back
+53
+X#Y?
+SF 99
+9
+ALENG          ; back to 9 characters?
+X#Y?
+SF 99
+
+END
