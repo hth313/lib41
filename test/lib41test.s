@@ -1,7 +1,7 @@
 #include "mainframe.h"
 #include "lib41.h"
 
-              .extern LBL_ALPHA, LBL_BITWISE
+              .extern LBL_ALPHA, LBL_BITWISE, LBL_RANDOM
               .section FAT
 XROMno:       .equ    17
 
@@ -17,8 +17,15 @@ FatStart:
               FAT     BCDOR
               FAT     BCDXOR
               FAT     BCDNOT
+              FAT     SEED
+              FAT     RNDM
+              FAT     2D6
+              FAT     KILLBUF
+              FAT     BUF?
+              FAT     BUFSIZE
               .fatrpn LBL_ALPHA
               .fatrpn LBL_BITWISE
+              .fatrpn LBL_RANDOM
 FatEnd:       .con    0,0
 
 

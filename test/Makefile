@@ -2,7 +2,7 @@ VPATH =
 OBJS = $(SRCS:%.s=%.o) $(RPN_SRCS:%.rpn=%.o)
 MOD = lib41test.mod
 
-RPN_SRCS = alpha.rpn bitwise.rpn
+RPN_SRCS = alpha.rpn bitwise.rpn random.rpn
 SRCS = lib41test.s
 
 all: $(MOD)

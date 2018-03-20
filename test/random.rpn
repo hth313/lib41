@@ -1,0 +1,39 @@
+.local BUF?, KILLBUF, SEED, RNDM, 2D6, BUFSIZE
+
+
+LBL "RANDOM"
+6
+KILLBUF     ; ensure no seed buffer
+BUF?
+SF 99       ; still there
+.389
+SEED
+RNDM
+.580327
+X#Y?
+SF 99
+2D6
+6
+X#Y?
+SF 99
+2D6
+7
+X#Y?
+SF 99
+
+1
+6
+BUF?
+X=0?       ; negate test
+SF 99
+
+BUFSIZE    ; check that size is 1
+X#Y?
+SF 99
+
+LASTX
+6
+X#Y?
+SF 99
+
+END
