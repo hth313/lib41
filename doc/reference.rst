@@ -50,6 +50,10 @@ assignments.
 
 .. include:: buffer/killbuf.rst
 
+.. include:: buffer/bufsize.rst
+
+.. include:: buffer/bufthere.rst
+
 
 .. index:: control
 
