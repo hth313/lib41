@@ -17,11 +17,9 @@
 
               .name   "KILLBUF"
 KILLBUF:      gsbp    chkbufx
-              goto    10$           ; no such buffer
+              rtn                   ; no such buffer
               c=0     s             ; mark buffer for removal
               data=c
               c=0     x             ; select chip 0
               dadd=c
               golong  PKIOAS        ; pack I/O area (and remove buffer)
-
-10$:          golong  ERRNE         ; NONEXISTENT
