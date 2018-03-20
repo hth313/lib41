@@ -23,11 +23,11 @@
 ;;; IN: A - binary integer (all bits)
 ;;;     S0 -
 ;;; OUT: X - floating point number
-;;;
+;;; ASSUME: DADD 0 selected
 ;;;
 ;;; **********************************************************************
 
-              .pubweak AXtoX, AtoX, AtoX10, AtoXDrop
+              .pubweak AXtoX, AtoX, AtoX10, AtoXDrop, AtoXFill
               .section code, noroot
 
 AtoXDrop:     s0=0                  ; Use DROPST

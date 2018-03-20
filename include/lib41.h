@@ -88,7 +88,7 @@ LFE(entry):   .fat    `\entry`
 ;;; **********************************************************************
 
               ;; Support routines
-              .extern AXtoX, AtoX, AtoXDrop
+              .extern AXtoX, AtoX, AtoXDrop, AtoXFill
               .extern BCD2BIN, XBCD2BIN
               .extern `X<256`, `X<999`, `A<999`
 
