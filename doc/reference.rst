@@ -101,6 +101,16 @@ and ```X<256```.
 .. include:: conversion/decode.rst
 
 
+Input
+=====
+
+``KEYFC`` and ``KEYFCN`` are subroutines useful for dispatching on
+keys using a table. Based on ``KEY-FC`` from the Time module.
+
+
+.. include:: input/yntest.rst
+
+
 .. index:: random numbers, pseudo random numbers
 
 Pseudo random numbers
