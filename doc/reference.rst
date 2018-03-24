@@ -37,7 +37,7 @@ Routines related to key re-assignments.
 Bitwise
 =======
 
-Bitwise operations on BCD integers.
+Bitwise operations on BCD integers. These are limited to 32-bit values.
 
 .. include:: bitwise/bcdand.rst
 
