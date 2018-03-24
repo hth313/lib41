@@ -319,7 +319,7 @@ epub_copyright = u'2018, Håkan Thörngren'
 #epub_uid = ''
 
 # A tuple containing the cover image and cover page html template filenames.
-#epub_cover = ()
+epub_cover = ('_static/coverGreen.jpg', '')
 
 # A sequence of (type, uri, title) tuples for the guide element of content.opf.
 #epub_guide = ()
