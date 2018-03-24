@@ -46,7 +46,7 @@
 
               ldi     5             ; # of entries
               a=c     x
-              gsbp    KEYFCN
+              gsbp    KEYFC
               .con    0x018         ; ON
               .con    0x016         ; Y
               .con    0x013         ; N

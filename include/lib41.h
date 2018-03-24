@@ -103,7 +103,7 @@ LFE(entry):   .fat    `\entry`
 ;;; **********************************************************************
 
               ;; Support routines
-              .extern KEYFCN, KEYFC
+              .extern KEYFC
 
               ;; Named routines
               .extern `Y/N?`

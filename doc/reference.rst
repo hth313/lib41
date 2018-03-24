@@ -104,8 +104,8 @@ and ```X<256```.
 Input
 =====
 
-``KEYFC`` and ``KEYFCN`` are subroutines useful for dispatching on
-keys using a table. Based on ``KEY-FC`` from the Time module.
+``KEYFC`` is useful for dispatching on keys using a table. This is
+essentially the same as ``KEY-FC`` from the Time module.
 
 
 .. include:: input/yntest.rst
