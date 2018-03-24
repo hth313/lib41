@@ -3,7 +3,7 @@
 
 ;;; **********************************************************************
 ;;;
-;;; Y/N - simple test for Y/N input
+;;; Y/N? - simple test for Y/N input
 ;;;
 ;;; Beeps and waits for up to 25 seconds for input.
 ;;; Executes next line if Y, skips next line if N.
@@ -14,11 +14,11 @@
 ;;;
 ;;; **********************************************************************
 
-              .pubweak `Y/N`
+              .pubweak `Y/N?`
               .section code, noroot
 
-              .name   "Y/N"
-`Y/N`:        s8=0
+              .name   "Y/N?"
+`Y/N?`:       s8=0
               s9=1
               gosub   ARGOUT        ; show alpha
 

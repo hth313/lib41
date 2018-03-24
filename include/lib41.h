@@ -106,7 +106,7 @@ LFE(entry):   .fat    `\entry`
               .extern KEYFCN, KEYFC
 
               ;; Named routines
-              .extern YNTEST
+              .extern `Y/N?`
 
 
 ;;; **********************************************************************

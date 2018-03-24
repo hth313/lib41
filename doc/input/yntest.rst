@@ -1,6 +1,6 @@
-.. index:: Y/N
+.. index:: Y/N?
 
-.. object:: Y/N
+.. object:: Y/N?
 
 Display alpha register and the string ``Y/N?`` right justified in the
 display and wait for key input. Pressing ``Y`` will resume execution
