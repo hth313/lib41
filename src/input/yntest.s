@@ -9,8 +9,7 @@
 ;;; Executes next line if Y, skips next line if N.
 ;;;
 ;;; Original idea from PANAME ROM, here modified a bit and with a time out
-;;; counter and puts up the goose again.
-;;; Works on 41C-41CX.
+;;; counter.
 ;;;
 ;;; **********************************************************************
 
@@ -40,7 +39,7 @@
 10$:          a=a+1   x
               gonc    11$
               c=c-1   x
-              goc     32$           ; time out, do N alternative
+              goc     35$           ; time out, do N alternative
 11$:          chkkb
               gonc    10$           ; wait for key
 
@@ -55,7 +54,7 @@
               .con    0             ; end marker
               goto    40$           ; OFF
               goto    30$           ; Y
-              goto    32$           ; N
+              goto    35$           ; N
               goto    20$           ; R/S
               goto    20$           ; <-
 
@@ -66,10 +65,6 @@
 20$:          golong  ERR110        ; stop and back step
 
 30$:          s8=1                  ; Y
-              goto    35$
-
-32$:          s8=0                  ; N
-
 35$:          gosub   CLLCDE
               ldi     0x2e          ; east goose
               srsabc
