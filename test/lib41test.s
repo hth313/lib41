@@ -1,12 +1,17 @@
 #include "mainframe.h"
 #include "lib41.h"
 
+LBLRPN:       .macro  lab
+              prefixFATRPN LBL_, \lab
+              .endm
+
+              .extern LBL_TESTLIB
               .extern LBL_ALPHA, LBL_BITWISE, LBL_RANDOM
               .section FAT
 XROMno:       .equ    17
 
               .con    XROMno        ; XROM number
-              .con    (FatEnd - FatStart) / 2 ; number of entry points
+              .con    .fatsize FatEnd ; number of entry points
 FatStart:
               .fat    Header        ; ROM header
               FAT     ARCLINT
@@ -23,9 +28,10 @@ FatStart:
               FAT     KILLBUF
               FAT     BUF?
               FAT     BUFSIZE
-              .fatrpn LBL_ALPHA
-              .fatrpn LBL_BITWISE
-              .fatrpn LBL_RANDOM
+              LBLRPN  TESTLIB
+              LBLRPN  ALPHA
+              LBLRPN  BITWISE
+              LBLRPN  RANDOM
 FatEnd:       .con    0,0
 
 

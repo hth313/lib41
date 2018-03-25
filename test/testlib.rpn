@@ -1,0 +1,9 @@
+;;; Run all tests
+
+LBL "TESTLIB"
+XEQ "ALPHA"
+XEQ "BITWISE"
+XEQ "RANDOM"
+"ALL OK"
+AVIEW
+END
