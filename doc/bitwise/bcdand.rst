@@ -1,6 +1,6 @@
-.. index:: BCDADD
+.. index:: BCDAND
 
-.. object:: BCDADD
+.. object:: BCDAND
 
 Perform bitwise AND on the BCD floating point numbers in X and Y.
 

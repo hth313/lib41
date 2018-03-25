@@ -25,20 +25,36 @@ Bring it in
 ===========
 
 To actually make use of something in Lib41 you need to refer to it. If
-it is an MCODE instruction, there will be a public label after the
-``.name`` directive with the same name as the instruction. So if
-you want to include the ``RTN?`` instruction in your module:
+it is a names MCODE routine, there will be a public label after the
+``.name`` directive with the same name as the routine. So if you want
+to include the ``ARCLINT`` routine in your module:
 
 .. code-block:: ca65
 
+   #include "lib41.h"
    ;;; In your FAT section
-              .extern `RTN?`
 
               .con    XROMno        ; XROM number
               .con    .fatsize FatEnd ; number of entry points
               ...
-              .fat    `RTN?`
+              .fat    ARCLINT
 
 
-As can be seen, all that is needed is an ``.extern`` directive to
-make the symbol known and and entry in the function address table.
+As can be seen, once ``lib41.h`` has been included all entry points
+are known. Simply add the MCODE routines that you want to your FAT
+(Function Address Table).
+
+If you also have RPN code in your module that makes use of local MCODE
+routines, the ``FAT`` macro can be used. It behaves as the ``.fat``
+directive and additionally inserts the special label that makes it
+possible to refer to as a local routine from RPN:
+
+.. code-block:: ca65
+
+   #include "lib41.h"
+   ;;; In your FAT section
+
+              .con    XROMno        ; XROM number
+              .con    .fatsize FatEnd ; number of entry points
+              ...
+              FAT    ARCLINT
