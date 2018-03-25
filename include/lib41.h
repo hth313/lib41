@@ -27,6 +27,17 @@ FAT:          .macro  entry
 LFE(entry):   .fat    `\entry`
               .endm
 
+FATRPN:       .macro  entry
+              .public LFE(entry)
+LFE(entry):   .fatrpn `\entry`
+              .endm
+
+;;; RPN function when compiled with a prefix
+prefixFATRPN  .macro  prefix, entry
+              .public LFE(entry)
+LFE(entry):   .fatrpn `\prefix\entry`
+              .endm
+
 
 ;;; **********************************************************************
 ;;;
