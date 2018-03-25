@@ -6,6 +6,82 @@ This chapter is divided into sections on different categories to group
 routines together based on their application.
 
 
+.. table:: Overview
+ :widths: 1 1 4
+ :column-dividers: none single single none
+
+ +--------------+----------------+----------------------------------+
+ |Name          |Category        |Description                       |
+ +==============+================+==================================+
+ |``ARCLINT``   |alpha           |Append integer from X to alpha    |
+ |              |                |register                          |
+ +--------------+----------------+----------------------------------+
+ |``ASHFX``     |alpha           |Delete X number of characters     |
+ |              |                |from alpha register               |
+ +--------------+----------------+----------------------------------+
+ |``ATOXR``     |alpha           |Take rightmost character from     |
+ |              |                |alpha register and return as      |
+ |              |                |character code in X               |
+ +--------------+----------------+----------------------------------+
+ |``XTOAL``     |alpha           |Take character code from X and    |
+ |              |                |insert character to left end of   |
+ |              |                |alpha register                    |
+ +--------------+----------------+----------------------------------+
+ |``MAPKEYS``   |assignment      |Rebuild the assignment bitmap     |
+ +--------------+----------------+----------------------------------+
+ |``MKXYZ``     |assignment      |Make assignment based on          |
+ |              |                |instruction codes on stack        |
+ +--------------+----------------+----------------------------------+
+ |``BCDAND``    |bitwise         |Bitwise AND floating point        |
+ |              |                |integer in X                      |
+ +--------------+----------------+----------------------------------+
+ |``BCDOR``     |bitwise         |Bitwise OR floating point         |
+ |              |                |integer in X                      |
+ +--------------+----------------+----------------------------------+
+ |``BCDXOR``    |bitwise         |Bitwise exclusive OR floating     |
+ |              |                |point integer in X                |
+ +--------------+----------------+----------------------------------+
+ |``BCDNOT``    |bitwise         |Bitwise complement floating       |
+ |              |                |point integer in X                |
+ +--------------+----------------+----------------------------------+
+ |``BUFSIZE``   |buffer          |Get the size of a buffer          |
+ +--------------+----------------+----------------------------------+
+ |``BUF?``      |buffer          |Does a buffer exist?              |
+ +--------------+----------------+----------------------------------+
+ |``KILLBUF``   |buffer          |Remove a buffer                   |
+ +--------------+----------------+----------------------------------+
+ |``XEQ>GTO``   |control         |Drop topmost return address       |
+ +--------------+----------------+----------------------------------+
+ |``PC<>RTN``   |control         |Exchange PC with topmost return   |
+ |              |                |address                           |
+ +--------------+----------------+----------------------------------+
+ |``RTN?``      |control         |Is there a return address on the  |
+ |              |                |call stack?                       |
+ +--------------+----------------+----------------------------------+
+ |``GE``        |control         |Go to end of program memory       |
+ +--------------+----------------+----------------------------------+
+ |``CODE``      |conversion      |Convert hex number in alpha       |
+ |              |                |register to NNN in X              |
+ +--------------+----------------+----------------------------------+
+ |``DECODE``    |conversion      |Convert NNN in X to hex number    |
+ |              |                |in alpha register                 |
+ +--------------+----------------+----------------------------------+
+ |``Y/N?``      |input           |Ask the user a yes or no question |
+ +--------------+----------------+----------------------------------+
+ |``RNDM``      |random          |Get pseudo random number          |
+ +--------------+----------------+----------------------------------+
+ |``SEED``      |random          |Set seed for pseudo random number |
+ |              |                |generator                         |
+ +--------------+----------------+----------------------------------+
+ |``APX``       |stack           |Append to number in X             |
+ +--------------+----------------+----------------------------------+
+ |``F/E``       |stack           |Set mixed ``FIX`` and ``ENG``     |
+ |              |                |mode                              |
+ +--------------+----------------+----------------------------------+
+ |``VMANT``     |stack           |Display mantissa of X             |
+ +--------------+----------------+----------------------------------+
+
+
 .. index:: alpha
 
 Alpha
@@ -48,11 +124,12 @@ Buffer
 Routines related to I/O buffers and the buffer area (except for key
 assignments.
 
-.. include:: buffer/killbuf.rst
-
 .. include:: buffer/bufsize.rst
 
 .. include:: buffer/bufthere.rst
+
+.. include:: buffer/killbuf.rst
+
 
 
 .. index:: control
