@@ -50,6 +50,8 @@ routines together based on their application.
  +--------------+----------------+----------------------------------+
  |``KILLBUF``   |buffer          |Remove a buffer                   |
  +--------------+----------------+----------------------------------+
+ |``LUHN?``     |checksum        |Luhn algorithm                    |
+ +--------------+----------------+----------------------------------+
  |``XEQ>GTO``   |control         |Drop topmost return address       |
  +--------------+----------------+----------------------------------+
  |``PC<>RTN``   |control         |Exchange PC with topmost return   |
@@ -130,6 +132,13 @@ assignments.
 
 .. include:: buffer/killbuf.rst
 
+
+Checksum
+========
+
+Routines related to checksum algorithms.
+
+.. include:: checksum/luhn.rst
 
 
 .. index:: control

@@ -1,11 +1,11 @@
-VPATH = alpha:assignments:bitwise:buffer:control:conversion:input:random:stack:util
+VPATH = alpha:assignments:bitwise:buffer:checksum:control:conversion:input:random:stack:util
 OBJS = $(SRCS:%.s=%.o) $(RPN_SRCS:%.rpn=%.o)
 LIB = lib41.a
 
 RPN_SRCS =
 SRCS = apx.s arclint.s ashfx.s error.s mapkeys.s mkxyz.s returnStack.s vmant.s \
        chkbuf.s killbuf.s rndm.s dice.s fixeng.s atoxr.s xtoal.s binbcds.s \
-       bcdand.s code.s decode.s bufsize.s keyfcn.s yntest.s
+       bcdand.s code.s decode.s bufsize.s keyfcn.s yntest.s luhn.s
 
 all: $(LIB)
 
