@@ -13,12 +13,13 @@ with your project by adding it to the linker command line.
 To use a routine, simply declare the desired routine with `.extern` and
 it is ready to use in your source file.
 
-To make it even simpler, the `lib41.h` header file provide all the
-`.extern` declaration and some macros that makes it easier to define a
-FAT entry that also can be used by RPN programs in the same module.
+To make it even simpler, the `lib41.h` header file provides all the
+`.extern` declarations and some macros. The FAT macro combined the
+`.fat` directive with a special label, to make it work with RPN
+programs in the same module.
 
-If it is a complete function then just add it to your function address
-table:
+For a named routine, all you need to do is to add add it to your
+function address table:
 
     #include "lib41.h"
             ...
