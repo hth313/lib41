@@ -99,7 +99,7 @@ LFE(entry):   .fatrpn `\prefix\entry`
 ;;; **********************************************************************
 
               ;; Support routines
-              .extern AXtoX, AtoX, AtoXDrop, AtoXFill
+              .extern AXtoX, AtoX, AtoX10, AtoXDrop, AtoXFill
               .extern BCD2BIN, XBCD2BIN
               .extern `X<256`, `X<999`, `A<999`
 
