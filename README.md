@@ -1,3 +1,4 @@
+=================
 Library for HP-41
 =================
 
@@ -14,9 +15,9 @@ To use a routine, simply declare the desired routine with `.extern` and
 it is ready to use in your source file.
 
 To make it even simpler, the `lib41.h` header file provides all the
-`.extern` declarations and some macros. The FAT macro combined the
+`.extern` declarations and some macros. (The FAT macro combines the
 `.fat` directive with a special label, to make it work with RPN
-programs in the same module.
+programs in the same module.)
 
 For a named routine, all you need to do is to add add it to your
 function address table:
