@@ -70,7 +70,11 @@ routines together based on their application.
  +--------------+----------------+----------------------------------+
  |``Y/N?``      |input           |Ask the user a yes or no question |
  +--------------+----------------+----------------------------------+
+ |``2D6``       |random          |Roll two 6 sided dices and return |
+ |              |                |the result 2-12                   |
+ +--------------+----------------+----------------------------------+
  |``RNDM``      |random          |Get pseudo random number          |
+ |              |                |0-0.999999                        |
  +--------------+----------------+----------------------------------+
  |``SEED``      |random          |Set seed for pseudo random number |
  |              |                |generator                         |
