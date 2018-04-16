@@ -49,9 +49,10 @@
               s0=0
               goto    17$
 15$:          s0=1                  ; double next time
-17$:          rcr     -2
+17$:          rcr     -2            ; C[3:2]= digit(s)
               csr     x
-              csr     x
+              csr     x             ; C.X= single digit
+                                    ; C.M= ten digit
               ?c#0    m             ; above 9?
               gonc    18$           ; no
               c=c+1   x             ; yes, sum digits
@@ -64,12 +65,12 @@
               gonc    30$
               s7=0                  ; doing Y (also needed by SKP/NOSKP)
               c=regn  Y
-              s0=0                  ; do not double
+              s0=0                  ; do not double next time
               goto    5$
 
-30$:          b=a
-              asl                   ; multiply by 10
-              a=a-b                 ; multiply by 9
+30$:          b=a                   ; multiply by 9
+              asl
+              a=a-b
               c=regn  X             ; get orignal input
               ?a#c    pt            ; checksum OK?
               golnc   NOSKP
