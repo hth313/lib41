@@ -13,21 +13,25 @@ with your project by adding it to the linker command line.
 To use a routine, simply declare the desired routine with `.extern` and
 it is ready to use in your source file.
 
+To make it even simpler, the `lib41.h` header file provide all the
+`.extern` declaration and some macros that makes it easier to define a
+FAT entry that also can be used by RPN programs in the same module.
+
 If it is a complete function then just add it to your function address
 table:
 
-            #include "lib41.h"
+    #include "lib41.h"
             ...
             FAT ASHFX
 
 That is it! You now have imported the `ASHFX` function to your
 module and it is ready to be used by any local RPN program!
 
-To use a subroutine (that is not a named function), simply declare it
-and it is ready to be called using `gsbp` or `golp` (page relocatable
+In addition there are some support subroutines (not named routines for
+the FAT), they can be called using `gsbp` or `golp` (page relocatable
 calls):
 
-            #include "lib41.h"
+    #include "lib41.h"
             ...
             gsbp    errorMessage  ; key code error
             .messl  "KEYCODE ERR"
