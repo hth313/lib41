@@ -49,15 +49,10 @@
               s0=0
               goto    17$
 15$:          s0=1                  ; double next time
-17$:          rcr     -2            ; C[3:2]= digit(s)
-              csr     x
-              csr     x             ; C.X= single digit
-                                    ; C.M= ten digit
-              ?c#0    m             ; above 9?
-              gonc    18$           ; no
-              c=c+1   x             ; yes, sum digits
-              c=0     m
-18$:          a=a+c                 ; add to sum
+17$:          a=a+c                 ; add to sum
+              csr                   ; compensate for 10-digit
+              c=-c    pt
+              a=a-c
               ?b#0                  ; more digits?
               goc     10$           ; yes
 
