@@ -34,25 +34,21 @@
               setdec
               s7=1                  ; doing X
               a=0                   ; clear sum
-              csr                   ; skip over checksum digit
               pt=     0
-              s0=1                  ; double
+              c=0     pt            ; ignore checksum digit
 
 5$:           bcex                  ; B= digits
-
-10$:          c=0
-              bcex    pt            ; take next digit
+              c=0                   ; no double next time
+10$:          bcex    pt            ; take next digit
               bsr
-              ?s0=1                 ; double?
+              ?c#0    s             ; double?
               gonc    15$           ; no
-              c=c+c                 ; yes
-              s0=0
-              goto    17$
-15$:          s0=1                  ; double next time
-17$:          a=a+c                 ; add to sum
-              csr                   ; compensate for 10-digit
+              c=c+c   x             ; yes
+15$:          c=-c-1  s             ; toggle double flag
+              a=a+c   x             ; add to sum
+              csr     x             ; compensate for 10-digit
               c=-c    pt
-              a=a-c
+              a=a-c   x
               ?b#0                  ; more digits?
               goc     10$           ; yes
 
@@ -60,7 +56,6 @@
               gonc    30$
               s7=0                  ; doing Y (also needed by SKP/NOSKP)
               c=regn  Y
-              s0=0                  ; do not double next time
               goto    5$
 
 30$:          b=a                   ; multiply by 9
