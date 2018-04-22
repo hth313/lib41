@@ -61,7 +61,7 @@
 30$:          b=a                   ; multiply by 9
               asl
               a=a-b
-              c=regn  X             ; get orignal input
+              c=regn  X             ; get original input
               ?a#c    pt            ; checksum OK?
               golnc   NOSKP
               golong  SKP
