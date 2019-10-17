@@ -23,7 +23,7 @@
 ;;; **********************************************************************
 
               .pubweak APX
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "APX"
 APX:          c=regn  14            ; check if alpha mode

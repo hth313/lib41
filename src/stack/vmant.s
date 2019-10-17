@@ -8,7 +8,7 @@
 
               .pubweak VMANT
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name   "VMANT"
 VMANT:        c=regn  X
               gosub   CHK_NO_S      ; check ALPHA DATA
@@ -26,4 +26,3 @@ VMANT:        c=regn  X
               regn=c  d
               st=1    8
               golong  MSG105        ; set message flag
-

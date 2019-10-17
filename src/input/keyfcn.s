@@ -19,7 +19,7 @@
 ;;;
 ;;; ************************************************************
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .public KEYFC
 
 KEYFC:        acex    x

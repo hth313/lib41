@@ -16,7 +16,7 @@
 ;;; **********************************************************************
 
               .pubweak BCDAND, BCDOR, BCDXOR, BCDNOT
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "BCDNOT"
 BCDNOT:       gsbp    XBCD2BIN

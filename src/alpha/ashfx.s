@@ -8,7 +8,7 @@
 
               .pubweak ASHFX
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name   "ASHFX"
 ASHFX:        c=regn  X
               gosub   BCDBIN

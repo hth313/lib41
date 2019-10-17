@@ -11,9 +11,9 @@
 
               .pubweak XTOAL
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name   "XTOAL"
-XTOAL:        gsbp    `X<256`
+XTOAL:        gsbp    `getX<256`
               m=c                   ; M= character
               pt=     3             ; set up first address
               lc      6             ; for alpha   0x6008

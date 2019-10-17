@@ -14,7 +14,7 @@
 ;;; **********************************************************************
 
               .pubweak `Y/N?`
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "Y/N?"
 `Y/N?`:       s8=0

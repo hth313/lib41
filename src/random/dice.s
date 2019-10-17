@@ -2,7 +2,7 @@
 #include "lib41.h"
 
               .pubweak `2D6`
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "2D6"
 `2D6`:        s9=0

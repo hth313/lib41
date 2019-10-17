@@ -7,7 +7,7 @@
 ;;; **********************************************************************
 
               .pubweak ARCLINT
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "ARCLINT"
 ARCLINT:      c=regn  14

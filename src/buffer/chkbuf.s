@@ -1,3 +1,6 @@
+#ifdef OS4
+#include "OS4.h"
+#endif
 #include "mainframe.h"
 
 ;;; **********************************************************************
@@ -19,8 +22,9 @@
 ;;;
 ;;; **********************************************************************
 
+#ifndef OS4
               .pubweak chkbuf
-              .section code, noroot
+              .section Lib41Code, noroot
 
 chkbuf:       acex    x             ; main find entry point
               rcr     2             ; C[12]= buffer number
@@ -55,7 +59,7 @@ chkbuf:       acex    x             ; main find entry point
               c=0     xs
               a=a+c   x
               goto    2$
-
+#endif // not OS4
 
 ;;; **********************************************************************
 ;;;
@@ -64,7 +68,7 @@ chkbuf:       acex    x             ; main find entry point
 ;;; **********************************************************************
 
               .pubweak chkbufx
-              .section code, noroot
+              .section Lib41Code, noroot
 
 chkbufx:      c=regn  X
               gosub   BCDBIN
@@ -72,4 +76,9 @@ chkbufx:      c=regn  X
               ldi     16
               ?a<c    x
               golong  ERRNE         ; NONEXISTENT
+#ifdef OS4
+              acex    x
+              golong  chkbuf
+#else
               golp    chkbuf
+#endif

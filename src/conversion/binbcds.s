@@ -28,7 +28,7 @@
 ;;; **********************************************************************
 
               .pubweak AXtoX, AtoX, AtoX10, AtoXDrop, AtoXFill
-              .section code, noroot
+              .section Lib41Code, noroot
 
 AtoXDrop:     s0=0                  ; Use DROPST
               goto    AtoX10
@@ -105,7 +105,7 @@ AtoX10:       pt=     13            ; digit counter
 ;;; **********************************************************************
 
               .pubweak BCD2BIN, XBCD2BIN
-              .section code, noroot
+              .section Lib41Code, noroot
 
 XBCD2BIN:     c=regn  x             ; use X as input
               a=c
@@ -113,7 +113,7 @@ BCD2BIN:      a=a-1   s             ; check for ALPHA DATA
               a=a-1   s
               golc    ERRAD         ; ALPHA DATA
               ?a#0    xs
-              golc    ERRDE         ; negative exponent --> DATA ERROR
+              goc     2$            ; negative exponent --> zero
               pt=     1
               ?a#0    pt
               golc    ERRDE         ; too large exponent --> DATA ERROR
@@ -138,27 +138,30 @@ BCD2BIN:      a=a-1   s             ; check for ALPHA DATA
               a=a+c
               goto    1$
 
+2$:           clrabc
+              rtn
+
 
 ;;; **********************************************************************
-;;; * X<256 - routine to get int(X) and check if int(X) < 256
+;;; * getX<256 - routine to get int(X) and check if int(X) < 256
 ;;; *   input  : chip 0 enable
 ;;; *              if int(X) >= 256 will exit to "DATA ERROR"
 ;;; *              if X has a string, will say "ALPHA DATA"
-;;; * X<999 - get int(X) and check if int(X) < 1000
+;;; * getX<999 - get int(X) and check if int(X) < 1000
 ;;; *   input  : chip 0 enable
 ;;; *   output : A.X = C.X = int(decimal number)
 ;;; *   used  A, B.X, C, S8    +2 sub levels
 ;;;
 ;;; This code is taken from Extended Functions
 
-              .pubweak `X<256`, `X<999`, `A<999`
-              .section code, noroot
+              .pubweak `getX<256`, `getX<999`, `getA<999`
+              .section Lib41Code, noroot
 
-`X<999`:      c=regn  X
+`getX<999`:   c=regn  X
               a=c
-`A<999`:      ldi     1000
+`getA<999`:   ldi     1000
               goto    INT10
-`X<256`:      c=regn  X
+`getX<256`:   c=regn  X
               a=c
               ldi     256
 INT10:        bcex    x

@@ -8,7 +8,7 @@
 
               .pubweak `XEQ>GTO`
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name   "XEQ>GTO"
 `XEQ>GTO`:    c=regn  a
               pt=     3
@@ -32,7 +32,7 @@
 
               .pubweak `PC<>RTN`
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name   "PC<>RTN"
 `PC<>RTN`:    c=regn  b             ; check whether return exists
               rcr     4
@@ -71,7 +71,7 @@
 
               .pubweak `RTN?`
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name   "RTN?"
 `RTN?`:       c=regn  b
               rcr     4
@@ -90,7 +90,7 @@
 
               .pubweak GE
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name   "GE"
 GE:           c=regn  c             ; get .END. pointer
               c=0     m

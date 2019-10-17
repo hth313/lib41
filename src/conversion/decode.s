@@ -12,7 +12,7 @@
 ;;; **********************************************************************
 
               .pubweak DECODE
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "DECODE"
 DECODE:       st=1?   13            ; clear ALPHA if called from keyboard

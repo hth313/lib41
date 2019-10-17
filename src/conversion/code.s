@@ -13,7 +13,7 @@
 ;;; ************************************************************
 
               .pubweak CODE
-              .section code, noroot
+              .section Lib41Code, noroot
 
 
               .name   "CODE"

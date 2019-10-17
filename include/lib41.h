@@ -21,6 +21,7 @@
 ;;; **********************************************************************
 
 #define LFE(x)  `FAT entry: \x`
+#define FATOFF(x) (LFE(x) - FatStart) / 2
 
 FAT:          .macro  entry
               .public LFE(entry)
@@ -38,6 +39,10 @@ prefixFATRPN  .macro  prefix, entry
 LFE(entry):   .fatrpn `\prefix\entry`
               .endm
 
+;;; Make it easy to populate a key table
+KeyEntry:     .macro  fun
+              .con   FATOFF(fun)
+              .endm
 
 ;;; **********************************************************************
 ;;;
@@ -76,8 +81,9 @@ LFE(entry):   .fatrpn `\prefix\entry`
 ;;; **********************************************************************
 
               ;; Support routines
+#ifndef OS4_H
               .extern chkbuf, chkbufx
-
+#endif
               ;; Named routines
               .extern BUFSIZE, `BUF?`, KILLBUF
 
@@ -101,7 +107,7 @@ LFE(entry):   .fatrpn `\prefix\entry`
               ;; Support routines
               .extern AXtoX, AtoX, AtoX10, AtoXDrop, AtoXFill
               .extern BCD2BIN, XBCD2BIN
-              .extern `X<256`, `X<999`, `A<999`
+              .extern `getX<256`, `getX<999`, `getA<999`
 
               ;; Named routines
               .extern CODE, DECODE
@@ -159,7 +165,9 @@ LFE(entry):   .fatrpn `\prefix\entry`
 ;;;
 ;;; **********************************************************************
 
+#ifndef OS4_H
               .extern displayERR, errorMessage, errorExit
               .extern noRoom
+#endif
 
 #endif // __LIB41__

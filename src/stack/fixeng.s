@@ -5,7 +5,7 @@
 ;;; **********************************************************************
 
               .pubweak `F/E`
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "F/E"
 `F/E`:        c=regn  d

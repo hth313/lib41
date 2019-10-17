@@ -28,7 +28,7 @@
 
               .pubweak `LUHN?`
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .name "LUHN?"
 `LUHN?`:      c=regn  X
               setdec

@@ -1,3 +1,6 @@
+#ifdef OS4
+#include "OS4.h"
+#endif
 #include "mainframe.h"
 #include "lib41.h"
 
@@ -20,7 +23,7 @@ XASN05:       .equlab 0x27ad        ; unofficial entry point
 ;;; **********************************************************************
 
               .pubweak MKXYZ, Assign2
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "MKXYZ"
 MKXYZ:        c=regn  z
@@ -41,9 +44,18 @@ MKXYZ:        c=regn  z
               c=regn  x
               ?c#0    xs
               gonc    MKX10
-MKXERR:       gsbp    errorMessage  ; key code error
+MKXERR:
+#ifdef OS4
+              gosub errorMessage
+#else
+              gsbp    errorMessage  ; key code error
+#endif
               .messl  "KEYCODE ERR"
+#ifdef OS4
+              golong  errorExit
+#else
               golp    errorExit
+#endif
 
 MKX10:        a=c
               c=c-1   x             ; X<10?

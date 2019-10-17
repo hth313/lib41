@@ -10,7 +10,7 @@
 ;;; **********************************************************************
 
               .pubweak MAPKEYS
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "MAPKEYS"
 MAPKEYS:      c=regn  15

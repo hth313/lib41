@@ -11,7 +11,7 @@
 ;;; **********************************************************************
 
               .pubweak BUFSIZE
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "BUFSIZE"
 BUFSIZE:      gsbp chkbufx
@@ -39,7 +39,7 @@ BUFSIZE:      gsbp chkbufx
 ;;; **********************************************************************
 
               .pubweak `BUF?`
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "BUF?"
 `BUF?`:       s7=0

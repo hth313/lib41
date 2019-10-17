@@ -11,7 +11,7 @@
 ;;; **********************************************************************
 
               .pubweak ATOXR
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "ATOXR"
 ATOXR:        c=regn  M

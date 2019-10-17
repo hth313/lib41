@@ -13,7 +13,7 @@
 ;;; **********************************************************************
 
               .pubweak KILLBUF
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "KILLBUF"
 KILLBUF:      gsbp    chkbufx

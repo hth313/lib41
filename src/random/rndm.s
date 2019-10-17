@@ -1,3 +1,6 @@
+#ifdef OS4
+#include "OS4.h"
+#endif
 #include "mainframe.h"
 #include "lib41.h"
 
@@ -30,7 +33,7 @@ IGDHMS:       .equ    0x5AB6         ; time module
 
               .pubweak RNDM, SEED
               .pubweak RNDM0, RNDMA, StoreSeed
-              .section code, noroot
+              .section Lib41Code, noroot
 
               .name   "RNDM"
 RNDM:         s9=1
@@ -203,8 +206,16 @@ create_seed_buffer:
               data=c
               goto    store_seed
 
+#ifdef OS4
+1$:           golong  noRoom
+#else
 1$:           golp    noRoom        ; no room to create seed buffer
+#endif
 
 chkbuf6:      ldi     6
+#ifdef OS4
+              golong  chkbuf
+#else
               a=c
               golp    chkbuf
+#endif

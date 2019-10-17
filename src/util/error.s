@@ -10,7 +10,7 @@
 
               .pubweak displayERR, errorMessage, errorExit
 
-              .section code, noroot
+              .section Lib41Code, noroot
 
 displayERR:   gosub   MESSL
               .messl  " ERR"
@@ -30,7 +30,7 @@ errorMessage: gosub   ERRSUB
 ;;;
 ;;; **********************************************************************
 
-              .section code, noroot
+              .section Lib41Code, noroot
               .pubweak noRoom
 noRoom:       gsbp    errorMessage
               .messl  "NO ROOM"
