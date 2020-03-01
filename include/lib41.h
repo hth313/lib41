@@ -20,8 +20,18 @@
 ;;;
 ;;; **********************************************************************
 
+// These are also defined in OS4.h, if using both, include OS4 first.
+#ifndef __OS4_H__
 #define LFE(x)  `FAT entry: \x`
+
 #define FATOFF(x) (LFE(x) - FatStart) / 2
+
+;;; Make it easy to populate a key table
+KeyEntry:     .macro  fun
+              .con   FATOFF(fun)
+              .endm
+
+#endif
 
 FAT:          .macro  entry
               .public LFE(entry)
@@ -37,11 +47,6 @@ LFE(entry):   .fatrpn `\entry`
 prefixFATRPN  .macro  prefix, entry
               .public LFE(entry)
 LFE(entry):   .fatrpn `\prefix\entry`
-              .endm
-
-;;; Make it easy to populate a key table
-KeyEntry:     .macro  fun
-              .con   FATOFF(fun)
               .endm
 
 ;;; **********************************************************************
@@ -81,7 +86,7 @@ KeyEntry:     .macro  fun
 ;;; **********************************************************************
 
               ;; Support routines
-#ifndef OS4_H
+#ifndef __OS4_H__
               .extern chkbuf, chkbufx
 #endif
               ;; Named routines
@@ -165,7 +170,7 @@ KeyEntry:     .macro  fun
 ;;;
 ;;; **********************************************************************
 
-#ifndef OS4_H
+#ifndef __OS4_H__
               .extern displayERR, errorMessage, errorExit
               .extern noRoom
 #endif
